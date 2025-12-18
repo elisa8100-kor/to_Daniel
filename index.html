@@ -6,29 +6,28 @@
   <title>Letter</title>
 </head>
 <body>
-  <p>
-    <a href="#" onclick="verifyIdentity()">Dear Cousin,</a>
-  </p>
+
+  <a href="#" onclick="verifyIdentity()">Dear Cousin,</a>
 
   <script>
     function verifyIdentity() {
-      const firstName = prompt("Please enter your first name:");
-      const lastName = prompt("Please enter your last name:");
+      const firstName = prompt("First name:");
+      const lastName = prompt("Last name:");
 
-      // CHANGE THESE TO THE CORRECT NAME
-      const correctFirstName = "John";
-      const correctLastName = "Doe";
+      const correctFirstName = "John"; // change this
+      const correctLastName = "Doe";   // change this
 
       if (
         firstName && lastName &&
         firstName.toLowerCase() === correctFirstName.toLowerCase() &&
         lastName.toLowerCase() === correctLastName.toLowerCase()
       ) {
-        document.body.innerHTML = "<p>Hi! I hope you’re doing well.</p>";
+        document.body.innerHTML = "Hi! I hope you’re doing well.";
       } else {
-        alert("Name does not match.");
+        alert("This letter is not for you.");
       }
     }
   </script>
+
 </body>
 </html>
