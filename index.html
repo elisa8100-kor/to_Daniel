@@ -2,21 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Letter</title>
 </head>
 <body>
-Dear Cousin,
-<br><br>
-Hi! I hope you are doing well. Do you remember when we played chess together in Australia, sitting across from each other and taking turns? I still remember that time clearly.
-<br><br>
-I was thinking it would be nice to play chess with you again. This time, I was wondering if we could try correspondence chess. We can send one move at a time by message and take as long as we want to think.
-<br><br>
-We don’t need to hurry, and it doesn’t matter who wins. I just think it would be fun to play together again, even from far away.
-<br><br>
-If you would like to try, please let me know. I’m okay with either color.
-<br><br>
-Your cousin
+  <p>
+    <a href="#" onclick="verifyIdentity()">Dear Cousin,</a>
+  </p>
+
+  <script>
+    function verifyIdentity() {
+      const firstName = prompt("Please enter your first name:");
+      const lastName = prompt("Please enter your last name:");
+
+      // CHANGE THESE TO THE CORRECT NAME
+      const correctFirstName = "John";
+      const correctLastName = "Doe";
+
+      if (
+        firstName && lastName &&
+        firstName.toLowerCase() === correctFirstName.toLowerCase() &&
+        lastName.toLowerCase() === correctLastName.toLowerCase()
+      ) {
+        document.body.innerHTML = "<p>Hi! I hope you’re doing well.</p>";
+      } else {
+        alert("Name does not match.");
+      }
+    }
+  </script>
 </body>
 </html>
